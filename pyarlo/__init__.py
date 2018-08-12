@@ -187,7 +187,8 @@ class PyArlo(object):
 
             if (device.get('state') == 'provisioned' and
                     (device.get('deviceType') == 'basestation' or
-                     device.get('modelId') == 'ABC1000')):
+                     device.get('modelId') == 'ABC1000' or
+                     device.get('modelId') == 'VMB4000-siren')):
                 base = ArloBaseStation(name, device, self.__token, self)
                 self._all_devices['base_station'].append(base)
 
